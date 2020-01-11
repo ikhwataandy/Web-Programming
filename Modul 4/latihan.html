@@ -1,0 +1,77 @@
+<html>
+
+<head>
+    <title>Latihan</title>
+</head>
+
+<script language="JavaScript">
+    function iff() {
+        var sw = document.kirim.k1.value
+        if (sw >= 0 && sw <= 40)
+            document.kirim.konversi2.value = "E"
+        else if (sw >= 41 && sw <= 55)
+            document.kirim.konversi2.value = "D"
+        else if (sw >= 56 && sw <= 60)
+            document.kirim.konversi2.value = "C"
+        else if (sw >= 61 && sw <= 65)
+            document.kirim.konversi2.value = "BC"
+        else if (sw >= 66 && sw <= 70)
+            document.kirim.konversi2.value -= "B"
+        else if (sw >= 71 && sw <= 80)
+            document.kirim.konversi2.value = "AB"
+        else if (sw >= 81 && sw <= 100)
+            document.kirim.konversi2.value = "A"
+
+    }
+
+    function aritmatika() {
+        var n1 = parseFloat(document.getElementById('n1').value);
+        var n2 = parseFloat(document.getElementById('n2').value);
+
+        var oper = document.getElementById('operation').value;
+
+        if (oper === '+') {
+            document.getElementById('result').value = n1 + n2;
+        }
+
+        if (oper === '-') {
+            document.getElementById('result').value = n1 - n2;
+        }
+
+        if (oper === '*') {
+            document.getElementById('result').value = n1 * n2;
+        }
+
+        if (oper === '/') {
+            document.getElementById('result').value = n1 / n2;
+        }
+
+    }
+</script>
+
+<body>
+    <form method="POST" name="kirim">
+        <p>Masukkan Angka <input type="text" name="k1" size="15">Hasil = <input type="text" name="konversi2" size="15"></p>
+        <p><input type="button" value="Konversi" name="h1" onclick=iff()></p>
+    </form>
+
+    <!-- aritmatika -->
+    <p>Operasi aritmatika</p>
+    <input type="text" id="n1">
+    <br><br>
+    <input type="text" id="n2">
+
+    <select id="operation">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">x</option>
+        <option value="/">/</option>     
+    </select>
+    <br><br>
+
+    <button onclick=aritmatika()> = </button>
+    <input type="text" id="result">
+
+</body>
+
+</html>

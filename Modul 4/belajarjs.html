@@ -1,0 +1,104 @@
+<html>
+
+<head>
+    <title>
+        belajar js
+    </title>
+</head>
+
+<script language="JavaScript">
+    //aritmatika
+    function test(val1, val2) {
+        document.write("<br>" + "Penjumlahan : val1+val2" + "<br>");
+        document.write(val1 + val2);
+        document.write("<br>" + "Perkalian : val1*val2" + "<br>");
+        document.write(val1 * val2);
+    }
+    //kondisi
+    function kondisi() {
+        kon1 = window.prompt("Nilai I :");
+        kon2 = window.prompt("Nilai II :");
+        document.write("<br>" + "kon1==kon2" + "<br>")
+        document.write(kon1 == kon2);
+    }
+    //kondisi
+
+    var nilai = prompt("Nilai(0-100) : ", 0);
+    var hasil = "";
+    if (nilai >= 75)
+        hasil = "Lulus !"
+    else
+        hasil = "Tidak lulus :("
+    document.write("Hasil =" + hasil + "<br>");
+
+    //switch case
+    function switchcase() {
+        sw = window.prompt("Input nilai 1-5");
+        switch (sw) {
+            case "1":
+                document.write("Angka 1");
+                break
+            case "2":
+                document.write("Angka 2");
+        }
+
+    }
+
+    //for
+    function loopfor() {
+        for (x = 0; x < 5; x++)
+            document.write(x + "<br>")
+    }
+
+    function test() {
+        var value1 = document.kirim.T1.value
+        if (value1 % 2 == 0)
+
+            document.kirim.T2.value = "Bilangan genap"
+        else
+            document.kirim.T2.value = "Bilangan ganjil"
+    }
+
+    // objek dokumen
+    function ubahWarnaLB(warna) {
+        document.bgColor = warna;
+    }
+
+    function ubahWarnaLD(warna) {
+        document.fgColor = warna;
+    }
+</script>
+
+<body>
+    percobaan pake js
+    <script langugage="JavaScript">
+        document.write("coba js");
+
+        document.write("semoga sukses<BR>");
+        // var nama = prompt("Siapa nama anda?", "Masukkan nama anda");
+        // document.write("Hai " + nama);
+
+        //operasi aritmatika
+    </script>
+
+    <input type="button" name="bt" value="aritmatika" onclick=test(2,5)>
+    <input type="button" name="bt2" value="relational" onclick=kondisi()>
+    <input type="button" name="bt4" value="for" onclick=loopfor()>
+    <input type="button" name="bt3" value="switch" onclick=switchcase()>
+    <!-- //form -->
+    <form method="POST" name="kirim">
+        <p> BIL <input type="text" name="T1" size="20">Merupakan BIL <input type="text" name="T2" size="20"></p>
+
+        <p><input type="button" value="TEBAK" name="b1" onclick=test()> </p>
+    </form>
+
+    <p>Objek dokumen</p> <br>
+    <form action="">
+        <input type="button" value="Latar Belakang Hijau" onclick="ubahWarnaLB('GREEEN')">
+        <input type="button" value="Teks Kuning" onclick="ubahWarnaLD('YELLOW')">
+    </form>
+
+
+</body>
+
+</html>
