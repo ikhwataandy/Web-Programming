@@ -1,0 +1,83 @@
+<html>
+
+<head>
+    <title>Latihan 5</title>
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script>
+        //Inisiasi awal penggunaan jQuery
+        $(document).ready(function() {
+            //Pertama sembunyikan elemen class gambar
+            $('.gambar').hide();
+
+            //Ketika elemen class tampil di klik maka elemen class gambar tampil
+            $('.tampil').click(function() {
+                $('.gambar').show();
+            });
+
+            //Ketika elemen class sembunyi di klik maka elemen class gambar sembunyi
+            $('.sembunyi').click(function() {
+                //Sembunyikan elemen class gambar
+                $('.gambar').hide();
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $(".square").dblclick(function() {
+                $(this).css("background-color", "red");
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $(".kotak").hide();
+            $(".fadein").click(function() {
+                $(".kotak").fadeIn();
+            });
+            $(".fadeout").click(function() {
+                $(".kotak").fadeOut();
+            });
+            $(".fadeto").click(function() {
+                $(".kotak").fadeTo(1000, 0.4);
+            })
+        });
+    </script>
+    <style>
+        .square {
+            height: 50px;
+            width: 50px;
+            background-color: #555;
+            margin: 10 auto;
+        }
+        
+        .kotak {
+            height: 50px;
+            width: 50px;
+            background-color: red;
+            margin: 10 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="button" class="tampil" value="Tampil" />
+    <input type="button" class="sembunyi" value="Sembunyi" />
+    <div class="gambar">
+        <img src="apel.png" />
+    </div>
+    <br><br>
+    <p>double klik pada kotak di bawah ini </p>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <br>
+    <p>Efek fade</p>
+    <br>
+    <button class="fadein">Fade In</button>
+    <button class="fadeout">Fade Out</button>
+    <button class="fadeto">Fade to 0.3</button>
+    <div class="kotak"></div>
+
+</body>
+
+</html>
