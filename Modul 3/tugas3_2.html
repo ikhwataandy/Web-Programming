@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Luas Lingkaran</title>
+</head>
+
+<body>
+    <form action="hasilluas.php" method="post">
+        
+        <table>
+            <tr>
+                <td>
+                    <label>Masukan Jari-jari</label>
+                    <br>
+                    <input type="text" name="bilangan">
+                    <!-- disini name akan mengambil argument bilangan dari method post yang terdapa pada code PHP di atas -->
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" name="hasil" value="Hitung Keliling Lingkaran">
+                    <!-- disini name akan mengambil argument cari dari method post pada code PHP di atas, dan jika Kita tekan tombol submit maka data atau code PHP di atas akan di proses -->
+                </td>
+            </tr>
+            <!-- <tr>
+                <td>
+                    <?php echo "Luas lingkaran nya adalah: $luas"; ?>
+                   
+                </td>
+            </tr> -->
+        </table>
+    </form>
+</body>
+
+</html>
